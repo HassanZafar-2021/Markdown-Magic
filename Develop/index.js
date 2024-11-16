@@ -8,11 +8,10 @@ const questions = [
   "What is your project description?",
   "What are the installation instructions?",
   "What is the usage information?",
-  "What are the contribution guidelines?",
-  "What are the test instructions?",
-  "What license would you like to use?",
-  "What is your GitHub username?",
-  "What is your email address?",
+  "Did you have any collaborators on this project?",
+  "List collaborators and thier github links",
+  "What license did you use for this project?",
+  "What badges would you like to include?",
 ];
 
 // TODO: Create a function to write README file
@@ -47,14 +46,15 @@ function init() {
         name: "usage",
       },
       {
-        type: "input",
+        type: "confirm",
         message: questions[4],
-        name: "contribution",
+        name: "collaborators",
+        default: false,
       },
       {
         type: "input",
         message: questions[5],
-        name: "test",
+        name: "collaboratorsList",
       },
       {
         type: "list",
@@ -103,6 +103,3 @@ If you have any questions, please contact me at ${response.email}. You can also 
 
 // Function call to initialize app
 init();
-
-
-
