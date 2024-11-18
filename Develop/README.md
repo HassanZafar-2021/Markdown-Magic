@@ -1,29 +1,27 @@
-# ds
+# kanye
 
 ## Description
+worst
 
-d
+## Table of Contents
+
 
 ## Installation
-
-d
+install
 
 ## Usage
+use
 
-d
+## License
+This project is licensed under the GPL license.
+https://opensource.org/licenses/GPL
 
-## Contribution
-
+## Contributing
 undefined
 
 ## Tests
-
 undefined
 
-## License
-
-This project is licensed under the None license.
-
 ## Questions
-
-If you have any questions, please contact me at d. You can also find more of my work at [d](https://github.com/d).
+If you have any questions, please open an issue or contact [undefined](https://github.com/undefined) directly at dsdsa.
+![License: GPL](https://img.shields.io/badge/License-GPL-blue.svg)

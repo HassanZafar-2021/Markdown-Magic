@@ -1,16 +1,17 @@
 import inquirer from "inquirer";
 import fs from "fs";
-import generateMarkdown from "./utils/generateMarkdown";
+import generateMarkdown from "./utils/generateMarkdown.js";
 
 const questions = [
-  "What is your project title?",
-  "What is your project description?",
-  "What are the installation instructions?",
-  "What is the usage information?",
-  "Did you have any collaborators on this project?",
-  "List collaborators and their github links",
-  "What license did you use for this project?",
-  "What badges would you like to include?",
+  "What is your project title?", // 0
+  "What is your project description?", // 1
+  "What are the installation instructions?", // 2
+  "What is the usage information?", // 3
+  "Did you have any collaborators on this project?", // 4
+  "List collaborators and their github links", // 5
+  "What license did you use for this project?", // 6
+  "What is your GitHub username?", // 7
+  "What is your email address?", // 8
 ];
 
 function writeToFile(fileName, data) {

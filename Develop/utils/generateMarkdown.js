@@ -1,29 +1,26 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  // TODO: Add logic to render the license badge
   return !license || license === "None"
     ? ""
     : `![License: ${license}](https://img.shields.io/badge/License-${license}-blue.svg)`;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
+  // TODO: Add logic to render the license link
   return !license || license === "None"
     ? ""
     : `https://opensource.org/licenses/${license}`;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(license) {
+  // TODO: Add logic to render the license section
   return !license || license === "None"
     ? ""
     : `This project is licensed under the ${license} license.`;
 }
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  // TODO: Generate markdown content based on the provided data
   return `# ${data.title}
 
 ## Description
@@ -40,6 +37,7 @@ ${data.usage}
 
 ## License
 ${renderLicenseSection(data.license)}
+${renderLicenseLink(data.license)}
 
 ## Contributing
 ${data.contributing}
