@@ -10,8 +10,10 @@ const questions = [
   "Did you have any collaborators on this project?", // 4
   "List collaborators and their github links", // 5
   "What license did you use for this project?", // 6
-  "What is your GitHub username?", // 7
-  "What is your email address?", // 8
+  "What is your contribution guidelines?", // 7
+  "What are your test instructions?", // 8
+  "What is your GitHub username?", // 9
+  "What is your email address?", // 10
 ];
 
 function writeToFile(fileName, data) {
@@ -63,13 +65,23 @@ function init() {
       },
       {
         type: "input",
-        message: questions[7],
+        message: questions[9],
         name: "username",
       },
       {
         type: "input",
-        message: questions[8],
+        message: questions[10],
         name: "email",
+      },
+      {
+        type: "input",
+        message: questions[7],
+        name: "contributing",
+      },
+      {
+        type: "input",
+        message: questions[8],
+        name: "tests",
       },
     ])
     .then((response) => {
@@ -79,3 +91,11 @@ function init() {
 }
 
 init();
+
+/* 
+Difference between instructions and usage in README.md
+Need help with aligning questions to readme headlines
+Do we need to use screenify recording?
+writeFile.JSON vs regular writeFile (talk about param)
+Do I need a readFile function?
+*/

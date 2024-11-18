@@ -25,9 +25,17 @@ function generateMarkdown(data) {
 
 ## Description
 ${data.description}
+${renderLicenseBadge(data.license)}
 
-## Table of Contents
-${data.tableOfContents ? data.tableOfContents : ""}
+## Table of Contents 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Credits](#credits)
+- [License](#license)
+- [Contributing](#contributing)
+- [Questions](#questions)
+
 
 ## Installation
 ${data.installation}
@@ -47,9 +55,8 @@ ${data.tests}
 
 ## Questions
 If you have any questions, please open an issue or contact [${
-    data.github
-  }](https://github.com/${data.github}) directly at ${data.email}.
-${renderLicenseBadge(data.license)}`;
+    data.username
+  }](https://github.com/${data.username}) directly at ${data.email}.`;
 }
 
 export default generateMarkdown;

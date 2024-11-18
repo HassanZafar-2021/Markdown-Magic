@@ -1,27 +1,34 @@
-# kanye
+# Gameseek
 
 ## Description
-worst
+Libary
+![License: Apache](https://img.shields.io/badge/License-Apache-blue.svg)
 
-## Table of Contents
+## Table of Contents 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Credits](#credits)
+- [License](#license)
+- [Contributing](#contributing)
+- [Questions](#questions)
 
 
 ## Installation
-install
+use frontned
 
 ## Usage
-use
+use extensions
 
 ## License
-This project is licensed under the GPL license.
-https://opensource.org/licenses/GPL
+This project is licensed under the Apache license.
+https://opensource.org/licenses/Apache
 
 ## Contributing
-undefined
+Use package
 
 ## Tests
-undefined
+rerun program
 
 ## Questions
-If you have any questions, please open an issue or contact [undefined](https://github.com/undefined) directly at dsdsa.
-![License: GPL](https://img.shields.io/badge/License-GPL-blue.svg)
+If you have any questions, please open an issue or contact [Ryuleh](https://github.com/Ryuleh) directly at han@gmail.com.
