@@ -1,7 +1,7 @@
-# Gameseek
+# GameSeek
 
 ## Description
-Libary
+Game API website lookup
 ![License: Apache](https://img.shields.io/badge/License-Apache-blue.svg)
 
 ## Table of Contents 
@@ -15,20 +15,20 @@ Libary
 
 
 ## Installation
-use frontned
+used vscode and frontend extension languages
 
 ## Usage
-use extensions
+used tailwind, and JS and HTML
 
 ## License
 This project is licensed under the Apache license.
 https://opensource.org/licenses/Apache
 
 ## Contributing
-Use package
+add more tailwind CSS or flowbite
 
 ## Tests
-rerun program
+run npm test
 
 ## Questions
-If you have any questions, please open an issue or contact [Ryuleh](https://github.com/Ryuleh) directly at han@gmail.com.
+If you have any questions, please open an issue or contact [HassanZafar-2021](https://github.com/HassanZafar-2021) directly at hassaanzafar3@gmail.com.
