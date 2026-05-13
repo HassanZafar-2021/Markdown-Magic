@@ -2,23 +2,10 @@ import inquirer from "inquirer";
 import fs from "fs";
 import generateMarkdown from "./utils/generateMarkdown.js";
 
-const questions = [
-  "What is your project title?", // 0
-  "What is your project description?", // 1
-  "What are the installation instructions?", // 2
-  "What is the usage information?", // 3
-  "Did you have any collaborators on this project?", // 4
-  "List collaborators and their github links", // 5
-  "What license did you use for this project?", // 6
-  "What is your contribution guidelines?", // 7
-  "What are your test instructions?", // 8
-  "What is your GitHub username?", // 9
-  "What is your email address?", // 10
-];
-
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
-    err ? console.error(err) : console.log("File created successfully!");
+    if (err) console.error("Error writing file:", err);
+    else console.log(`✅ README.md created successfully!`);
   });
 }
 
@@ -27,75 +14,78 @@ function init() {
     .prompt([
       {
         type: "input",
-        message: questions[0],
         name: "title",
+        message: "Project title:",
+        validate: (input) => input.trim() !== "" || "Title cannot be empty.",
       },
       {
         type: "input",
-        message: questions[1],
         name: "description",
+        message: "Project description:",
+        validate: (input) => input.trim() !== "" || "Description cannot be empty.",
       },
       {
         type: "input",
-        message: questions[2],
         name: "installation",
+        message: "Installation instructions:",
+        default: "Run `npm install` to install dependencies.",
       },
       {
         type: "input",
-        message: questions[3],
         name: "usage",
+        message: "Usage information:",
+        validate: (input) => input.trim() !== "" || "Usage cannot be empty.",
       },
       {
         type: "confirm",
-        message: questions[4],
         name: "collaborators",
+        message: "Did you have collaborators on this project?",
         default: false,
       },
       {
         type: "input",
-        message: questions[5],
         name: "collaboratorsList",
+        message: 'List collaborators as "Name: URL", separated by commas:',
         when: (answers) => answers.collaborators,
+        validate: (input) => input.trim() !== "" || "Please enter at least one collaborator.",
       },
       {
         type: "list",
-        message: questions[6],
         name: "license",
-        choices: ["MIT", "Apache", "GPL", "None"],
+        message: "Which license applies to this project?",
+        choices: ["MIT", "Apache-2.0", "GPL-3.0", "None"],
       },
       {
         type: "input",
-        message: questions[9],
-        name: "username",
-      },
-      {
-        type: "input",
-        message: questions[10],
-        name: "email",
-      },
-      {
-        type: "input",
-        message: questions[7],
         name: "contributing",
+        message: "Contribution guidelines:",
+        default: "Contributions are welcome! Please open a pull request.",
       },
       {
         type: "input",
-        message: questions[8],
         name: "tests",
+        message: "Test instructions:",
+        default: "Run `npm test` to execute tests.",
+      },
+      {
+        type: "input",
+        name: "username",
+        message: "Your GitHub username:",
+        validate: (input) => input.trim() !== "" || "GitHub username cannot be empty.",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Your email address:",
+        validate: (input) =>
+          /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input) || "Please enter a valid email address.",
       },
     ])
-    .then((response) => {
-      const markdownContent = generateMarkdown(response);
+    .then((answers) => {
+      const markdownContent = generateMarkdown(answers);
       writeToFile("README.md", markdownContent);
-    });
+    })
+    .catch((err) => console.error("Something went wrong:", err));
 }
 
 init();
-
-/* 
-Difference between instructions and usage in README.md
-Need help with aligning questions to readme headlines
-Do we need to use screenify recording?
-writeFile.JSON vs regular writeFile (talk about param)
-Do I need a readFile function?
-*/

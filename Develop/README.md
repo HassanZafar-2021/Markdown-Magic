@@ -1,34 +1,36 @@
-# GameSeek
+# CarGame
+
+
 
 ## Description
-Game API website lookup
-![License: Apache](https://img.shields.io/badge/License-Apache-blue.svg)
+car racing game
 
-## Table of Contents 
+## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Tests](#tests)
 - [Credits](#credits)
 - [License](#license)
 - [Contributing](#contributing)
+- [Tests](#tests)
 - [Questions](#questions)
 
-
 ## Installation
-used vscode and frontend extension languages
+npm install to run dependencies
 
 ## Usage
-used tailwind, and JS and HTML
+to run
+
+## Credits
+- Humza
 
 ## License
-This project is licensed under the Apache license.
-https://opensource.org/licenses/Apache
+No license specified.
 
 ## Contributing
-add more tailwind CSS or flowbite
+open a pull request
 
 ## Tests
-run npm test
+npm test
 
 ## Questions
-If you have any questions, please open an issue or contact [HassanZafar-2021](https://github.com/HassanZafar-2021) directly at hassaanzafar3@gmail.com.
+If you have any questions, open an issue or contact [Ryuleh](https://github.com/Ryuleh) at hassaanzafar3@gmail.com.
