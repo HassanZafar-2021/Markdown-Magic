@@ -11,6 +11,7 @@ A Node.js command-line tool that auto-generates a professional, structured READM
 
 ## Table of Contents
 
+- [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
